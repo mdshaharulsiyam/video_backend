@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3001;
 
 app.use(cors(
   {
-    origin: 'http://localhost:5173',
+    origin: 'https://dainty-pixie-1f6448.netlify.app',
     credentials: true,
   }
 ));
