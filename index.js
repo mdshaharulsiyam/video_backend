@@ -1,15 +1,8 @@
-import cors from 'cors';
 import express from 'express';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors(
-  {
-    origin: 'https://dainty-pixie-1f6448.netlify.app',
-    credentials: true,
-  }
-));
 app.use(express.json());
 
 let SHORTS = [
