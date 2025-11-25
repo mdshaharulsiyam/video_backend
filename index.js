@@ -1,8 +1,16 @@
+import cors from 'cors';
 import express from 'express';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://dainty-pixie-1f6448.netlify.app',
+  ],
+  methods: ['GET', 'POST', 'OPTIONS'],
+}));
 app.use(express.json());
 
 let SHORTS = [
